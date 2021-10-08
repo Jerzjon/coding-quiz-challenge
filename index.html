@@ -5,83 +5,96 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Coding Quiz Challenge</title>
 </head>
 
 <body>
-    <div class="container">
-        <h1 class="header">Coding Quiz Challenge</h1>
-        <h2>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</h2>
-        <div id="question-container" class="hide"></div>
-        <div class="controls">
-            <button id="start-btn" class="start-btn btn">Start Quiz</button>
-            <button id="start-btn" class="start-btn hide">Next</button>
-        </div>
-    </div>
+    <header>
+        <div class="timer">Time:</div>
+        <div class="scores">View Score Board</div>
+    </header>
 
-    <div class="container">
-        <h2 class="question1">Commonly used data types DO NOT include:</h1>
-        <div id="question-container" class="hide question"></div>
-        <div class="controls">
-            <button id="answer-btn" class="start-btn btn">strings</button>
-            <button id="start-btn" class="start-btn btn">booleans</button>
-            <button id="start-btn" class="start-btn btn">alerts</button>
-            <button id="start-btn" class="start-btn btn">numbers</button>
-            <button id="start-btn" class="start-btn hide">Next</button>
+    <div class="quiz-pages">
+        
+        <div class="start-page">
+            <h1>Coding Quiz Challenge</h1>
+            <p>Try to answer the following code-related questions within the time limit. 
+                <br>Keep in mind that incorrect answers will penalize your score/time
+                <br>by ten seconds!
+            </p>
+        
+            <div>
+                <button class="start-btn">Start Quiz</button>
+            </div>
+            
         </div>
-   
 
-    <div class="container">
-        <h2 class="question2">The condition in an if/else statement is enclosed with _______.</h2>
-        <div id="question-container" class="hide question"></div>
-        <div class="controls">
-            <button id="start-btn" class="start-btn btn">quotes</button>
-            <button id="start-btn" class="start-btn btn">curly brackets</button>
-            <button id="start-btn" class="start-btn btn">parenthesis</button>
-            <button id="start-btn" class="start-btn btn">square brackets</button>
-            <button id="start-btn" class="start-btn hide">Next</button>
-        </div>
-   
+        <div class="questions">  
 
-    <div class="container">
-        <h2 class="question3">Arrays in JavaScript can be used to store _______.</h2>
-        <div id="question-container" class="hide question"></div>
-        <div class="controls">
-            <button id="start-btn" class="start-btn btn">numbers and strings</button>
-            <button id="start-btn" class="start-btn btn">other arrays</button>
-            <button id="start-btn" class="start-btn btn">booleans</button>
-            <button id="start-btn" class="start-btn btn">all of the above</button>
-            <button id="start-btn" class="start-btn hide">Next</button>
-        </div>
+            <div class="question1" id="hide">
+                <h2>Commonly used data types DO NOT include:</h1>
+                <ul>
+                    <li class="wrong-answer answer">1. strings</li>
+                    <li class="wrong-answer answer">2. booleans</li>
+                    <li id="correct1" class="right-answer">3. alerts</li>
+                    <li class="wrong-answer answer">4. numbers</li>
+                </ul>  
+            </div> 
     
-
-    <div class="container">
-        <h2 class="question4">Arrays in JavaScript can be used to store _______.</h2>
-        <div id="question-container" class="hide question"></div>
-        <div class="controls">
-            <button id="start-btn" class="start-btn btn">numbers and strings</button>
-            <button id="start-btn" class="start-btn btn">other arrays</button>
-            <button id="start-btn" class="start-btn btn">booleans</button>
-            <button id="start-btn" class="start-btn btn">all of the above</button>
-            <button id="start-btn" class="start-btn hide">Next</button>
-        </div>
+            <div class="question1" id="hide">    
+                <h2>The condition in an if/else statement is enclosed with _______.</h2>
+                <ul>
+                    <li class="wrong-answer answer">1. quotes</li>
+                    <li class="wrong-answer answer">2. curly brackets</li>
+                    <li id="correct2" class="right-answer">3. parenthesis</li>
+                    <li class="wrong-answer answer">4. square brackets</li>
+                </ul>   
+            </div> 
    
-
-    <div class="container">
-        <h2 class="question5">Arrays in JavaScript can be used to store _______.</h2>
-        <div id="question-container" class="hide"></div>
-        <div class="controls">
-            <button id="start-btn" class="start-btn btn">numbers and strings</button>
-            <button id="start-btn" class="start-btn btn">other arrays</button>
-            <button id="start-btn" class="start-btn btn">booleans</button>
-            <button id="start-btn" class="start-btn btn">all of the above</button>
-            <button id="start-btn" class="start-btn hide">Next</button>
+            <div class="question2" id="hide">
+                <h2>Arrays in JavaScript can be used to store _______.</h2>
+                <ul>
+                    <li class="wrong-answer answer">1. numbers and strings</li>
+                    <li class="wrong-answer answer">2. other arrays</li>
+                    <li class="wrong-answer answer">3. booleans</li>
+                    <li id="correct3" class="right-answer">4. all of the above</li>
+                </ul>
+            </div> 
+    
+            <div class="question3" id="hide">
+                <h2>String values must be enclosed within __________ when being assigned to variables.</h2>
+                <ul>
+                    <li class="wrong-answer answer">1. numbers and strings</li>
+                    <li class="wrong-answer answer">2. other arrays</li>
+                    <li id="correct4" class="right-answer">3. booleans</li>
+                    <li class="wrong-answer answer">4. all of the above</li>
+                </ul>    
+            </div> 
+   
+            <div class="question3" id="hide">
+                <h2>A very useful tool used during development and debugging for printing content to the debugger is:</h2>
+                <ul>
+                    <li class="wrong-answer answer">1. JavaScript</li>
+                    <li class="wrong-answer answer">2. terminal/bash</li>
+                    <li class="wrong-answer answer">3. for loops</li>
+                    <li id="correct5" class="right-answer">4. console.log</li>
+                </ul>  
+            </div>  
+  
+ 
         </div>
+    </div>   
+
+    <div class="result hide">
+        <h2>Wrong!</h2>
     </div>
 
+    <script src="./assets/script.js"></script>
 
 
+        
 </body>
 </html>
 

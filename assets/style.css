@@ -1,0 +1,141 @@
+@font-face {
+    font-family: "myfont";
+    src: url(../fonts/AftaSansThin-Regular.otf);
+}
+
+* {
+    font-family: "myfont";
+}
+
+.scores {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.timer {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div {
+    display: block;
+}
+
+.quiz-pages {
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.start-page h1 {
+    font-size: 60px;
+}
+
+.p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.start-page p {
+    font-size: 25px;
+    margin-bottom: 35px;
+}
+
+
+.quiz-title {
+    font-size: 75px;
+}
+
+.quiz-description {
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.result {
+    position: absolute;
+    top: 90%;
+    left: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    color: rgb(196, 196, 196);
+    border-top: 3px solid rgb(196, 196, 196);
+    width: 1000px;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+.start-btn {
+    background-color: rgb(60, 4, 105);
+    color: white;
+    width: 200px;
+    height: 60px;
+    font-size: 35px;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    border: none;
+}
+
+.start-btn:hover {
+    background-color: rgb(185, 85, 224);
+}
+
+.container {
+    font-size: 60px;
+    text-align: left;
+}
+
+.ul {
+    padding-left: 0px;
+}
+
+.container li {
+    background-color: rgb(60, 4, 105);
+    color: white;
+    border: none;
+    text-align: left;
+    list-style: none;
+    border-radius: 10px;
+    font-size: 30px;
+    width: 320px;
+    height: 60px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.container li:hover {
+    background-color: rgb(185, 85, 224);
+}
+
+.hide {
+    display: none;
+}    
+
+.result-hide {
+    display: none;
+}
