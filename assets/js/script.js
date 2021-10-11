@@ -1,5 +1,7 @@
-var startButton = $(".start-button");
+var startButton = $(".start-btn");
 var startPage = $(".start-page");
+var finishPage = $("finish-page");
+var submitButton = $("submit-button")
 
 var question1 = $("#question1");
 var question2 = $("#question2");
@@ -19,7 +21,7 @@ var wrongMessage = $(".result");
 startButton.click(startGame)
 
 function startGame() {
-    console.log("Started");
+    console.log("start-page");
     startPage.hide();
     question1.show();
     wrong.click(function () {
@@ -100,6 +102,11 @@ function wrongAnswer() {
     wrongMessage.show();
 };
 
+function setFinishPage() {
+    finishPage.show()
+}; 
+
+
 var timer;
             var timeLeft=0;
             function startTimer() {
@@ -116,7 +123,7 @@ var timer;
 
         function finish() {
             clearInterval(timer);
-            alert("game Over!!")
+            alert("Game Over!")
         }
 
         function subtractTime() {
